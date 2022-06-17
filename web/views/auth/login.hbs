@@ -1,0 +1,36 @@
+ {{#if error}}<div class="alert"><div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <ul>
+        {{#if errorUser}}<li><strong>Usuario incorrecto</strong></li> {{/if}}
+        {{#if errorPassword}}<li><strong>Contraseña incorrecta</strong></li> {{/if}}
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div></div>{{/if}}
+{{#if messages}}
+<div class="alert"><div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>La Cuenta fue creada correctamente</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div></div>
+
+{{/if}}
+<div style="margin-left: 35%; margin-right: 35%;" class="card" id="ds">
+    <div class="card-body">
+        <h2 class="center">Log in</h2>
+            <hr  />
+        <form method="POST" action="/login">
+            <label>Username:</label>
+            <input type="text" class="form-control" name="username" {{#if error}}value="{{username}}" class="border-danger" {{/if}} required>
+            <div class="mb-2"></div>
+            <label>Password:</label>
+            <input type="password" class="form-control" name="password" {{#if error}}value="{{password}}" class="border-danger" {{/if}} required>
+            <input type="hidden" name="url" id="url" value="{{#if wasRedirect}}/poster{{else}}{{redirect}}{{/if}}">
+            <div class="mb-3"></div>
+            <input type="submit" class="btn btn-success" style="width: 100%;">
+        </form>
+    </div>
+</div>
+<div class="mb-2"></div>
+<div style="margin-left: 35%; margin-right: 35%;">
+    <div class="card center">
+        <p  style="margin-top: 3%;">¿No tienes una cuenta? <a href="/create-account">Crea una cuenta aquí</a>.</p>
+    </div>
+</div>
