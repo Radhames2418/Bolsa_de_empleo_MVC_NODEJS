@@ -4,4 +4,4 @@
 
 **Descripcion**: Proyecto realizado en HTML CSS JS y NODEJS, ademas utilizando una arquitectura MVC, donde, consume una API.
 
-**ENLACE PARA SABER MAS SOBRE LA DOCUMENTACION DEL PROYECTO** : 
+**ENLACE PARA SABER MAS SOBRE LA DOCUMENTACION DEL PROYECTO** : Documentación de Arquitectura - Bolsa de Empleos.pdf
